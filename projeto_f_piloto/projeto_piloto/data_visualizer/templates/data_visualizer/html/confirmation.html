@@ -1,0 +1,17 @@
+{% extends 'data_visualizer/html/main.html' %}
+
+{% block content %}
+  <label class="input_title">Insertar datos del paciente</label>
+  <br>
+  <p class="title_instruciones">instrucciones</p>
+  <br>
+
+    <p class="label_instruciones">verifique si la información presentada corresponde con la del archivo cargado, en caso afirmativo, haga clic en el botón de confirmación</p><br>
+
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit" class="input_button" name="confirmar">Confirmar</button>
+    <button type="submit" class="input_button" name="cancelar">Cancelar</button>
+  </form>
+
+{% endblock %}
