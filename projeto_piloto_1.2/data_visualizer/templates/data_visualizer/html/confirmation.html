@@ -1,0 +1,29 @@
+{% extends 'data_visualizer/html/main.html' %}
+
+{% block content %}
+  <label class="input_title">Insertar datos del paciente</label>
+  <br>
+  <br>
+  <p class="label_instruciones">verifique si la información presentada corresponde con la del archivo cargado, en caso afirmativo, haga clic en el botón de confirmación</p>
+  <br>
+
+  {% for info in info %}
+  <p class="label_instruciones"><strong>Apellido</strong>: {{ info.apellido }}</p><br>
+  <p class="label_instruciones"><strong>Nombre:</strong> {{ info.nombre }}</p><br>
+  <p class="label_instruciones"><strong>Edad:</strong> {{ info.edad }}</p><br>
+  <p class="label_instruciones"><strong>Altura:</strong> {{ info.altura }}</p><br>
+  <p class="label_instruciones"><strong>Nº de pie:</strong> {{ info.n_de_pie }}</p><br>
+  <p class="label_instruciones"><strong>Peso:</strong> {{ info.peso }}</p><br>
+  {% endfor %}
+
+  <form method="post" class="form_conf">
+    {% csrf_token %}
+    <div class="button_div">
+      <button type="submit" class="input_button" name="confirmar">Confirmar</button>
+    </div>
+    <div class="button_div">
+      <button type="submit" class="input_button" name="cancelar">Cancelar</button>
+    </div>
+  </form>
+
+{% endblock %}

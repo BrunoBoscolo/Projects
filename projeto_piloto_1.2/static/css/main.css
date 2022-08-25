@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+body {
+   background-color: rgb(237, 242, 244);
+}
+
+table.minimalist {
+  background-color: #FFFFFF;
+  margin-left: 2.5%;
+  width: 95%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.minimalist td, table.minimalist th {
+  padding: 4px 4px;
+}
+table.minimalist tbody td {
+  font-size: 13px;
+}
+table.minimalist thead {
+  background: #EF233C;
+  background: -moz-linear-gradient(top, #f35a6d 0%, #f0394f 66%, #EF233C 100%);
+  background: -webkit-linear-gradient(top, #f35a6d 0%, #f0394f 66%, #EF233C 100%);
+  background: linear-gradient(to bottom, #f35a6d 0%, #f0394f 66%, #EF233C 100%);
+}
+table.minimalist thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #EDF2F4;
+  text-align: center;
+}
+table.minimalist tfoot td {
+  font-size: 14px;
+}
+
+.title_div {
+  margin-left: 41%;
+  margin-top: 2%;
+  font-size: 36px;
+  font-family: 'Oswald', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(239, 35, 60);
+}
+
+.form_conf {
+  margin-left: 33%;
+  margin-bottom: 2%;
+}
+
+.form_div {
+  margin-top: 2%;
+  margin-left: 5%;
+  float: left;
+}
+
+.button_div {
+  margin-top: 1.5%;
+  margin-left: 10%;
+  float: left;
+}
+
+.input_button {
+  background-color: rgb(239, 35, 60); 
+  color: whitesmoke;
+  font-family: 'Oswald', sans-serif;
+  font-style: normal;
+  font-size: 22px;
+  font-weight: 400;
+  border: none;
+}
+
+.input_button_cad {
+  width: 10%;
+  margin-left: 44.7%;
+}
+
+.myfile {
+  opacity: 0;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+
+.title_instruciones {
+  margin-top: 3%;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.label_instruciones {
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.material-icons { 
+  font-size: 36px;
+  text-align: left;
+  padding-top: 18px;
+  padding-left: 8px;
+  padding-right: 4px;
+  float: left;
+  color: rgb(43, 45, 66);
+}
+
+.input_label {
+  width: 20%;
+  text-align: center;
+  font-size: 20px;
+  margin-left: 40%;
+  background-color: rgb(239, 35, 60); 
+  font-family: 'Oswald', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: whitesmoke;
+}
+
+.input_title {
+  margin-top: 3%;
+  margin-left: 37%;
+  font-size: 36px;
+  font-family: 'Oswald', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(239, 35, 60);
+}
+
+.sidenav {
+  height: 100%; 
+  width: 10%; 
+  position: fixed; 
+  z-index: 1; 
+  top: 78px; 
+  left: 0;
+  background-color: rgb(239, 35, 60); 
+  overflow-x: hidden; 
+  padding-top: 10px; 
+  transition: 0.5s; 
+}
+
+.sidenav a {
+  padding: 16px 16px 8px 16px;
+  text-decoration: None;
+  text-align: left;
+  font-size: 16px;
+  color: whitesmoke;
+  display: block;
+  transition: 0.3s;
+  font-family: 'Oswald', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sidenav a:hover {
+  background-color: rgb(216, 0, 50);
+  color: whitesmoke;
+  font-weight: 400;
+  font-family: 'Oswald', sans-serif;
+}
+
+.sidenav label {
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 10%;
+  margin-left: 10%;
+  font-family: 'Oswald', sans-serif;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.material-icons.md-48 { 
+  font-size: 48px; 
+}
+
+.main{
+  padding: 0px 10px;
+  margin-left: 11%;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

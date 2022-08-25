@@ -1,0 +1,20 @@
+{% extends 'data_visualizer/html/main.html' %}
+
+{% block content %}
+  <label class="input_title">Insertar datos del paciente</label>
+  <br>
+  <p class="title_instruciones">instrucciones</p>
+  <br>
+
+    <p class="label_instruciones">Elija un archivo válido haciendo clic en el botón de abajo</p><br>
+    <p class="label_instruciones">Formato de archivo compatible: xls , xlsx , xlsm , xlsb , odf , ods e odt</p><br>
+    <p class="label_instruciones">el sistema devolverá la información básica del paciente. compruebe si es correcto haciendo clic en el botón confirmar</p><br>
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="myfile" class="input_label">Elija el archivo</label>
+    <input type="file" name="myfile" id="myfile" class="myfile"><br>
+    <button type="submit" class="input_button_cad">Enviar</button>
+  </form>
+
+{% endblock %}
