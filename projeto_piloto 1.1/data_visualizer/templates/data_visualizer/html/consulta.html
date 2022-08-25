@@ -1,0 +1,62 @@
+{% extends 'data_visualizer/html/main.html' %}
+
+{% block content %}
+  <label class="title_div">Consulta de datos</label>
+  <br>
+
+  <form method="post" class="form_conf">
+    {% csrf_token %}
+    <div class="form_div">
+      <select id="filter" name="type">
+        <option value="apellido">Apellido</option>
+        <option value="nombre">Nombre</option>
+        <option value="edad">Edad</option>
+        <option value="altura">Altura</option>
+        <option value="n_de_pie">Nº de pie</option>
+        <option value="peso">Peso</option>
+      </select>
+
+      <input type="text" name="input">
+
+      <select id="filter" name="range">
+        <option value="mayor">Mayor</option>
+        <option value="menor">Menor</option>
+        <option value="igual">Igual</option>
+      </select>
+    </div>
+
+    <div class="button_div">
+      <button type="submit" class="input_button">filtrar</button>
+    </div>
+    <br>
+  </form>
+
+  
+  <br>
+  <table class="minimalist">
+    <thead>
+    <tr>
+      <th>Apellido</th>
+      <th>Nombre</th>
+      <th>Edad</th>
+      <th>Altura</th>
+      <th>Nº de pie</th>
+      <th>Peso</th>
+    </tr>
+    <thead>
+    <tbody>
+  {% for info in info %}
+    <tr>
+      <td>{{ info.apellido }}</td>
+      <td>{{ info.nombre }}</td>
+      <td>{{ info.edad }}</td>
+      <td>{{ info.altura }}</td>
+      <td>{{ info.n_de_pie }}</td>
+      <td>{{ info.peso }}</td>
+    </tr>
+  {% endfor %}
+    <tbody>
+</table>
+  
+
+{% endblock %}
